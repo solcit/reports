@@ -1,0 +1,70 @@
+<section class="sidebar">
+  <!-- sidebar menu: : style can be found in sidebar.less -->
+  <ul class="sidebar-menu">
+    <li class="header">MAIN NAVIGATION</li>
+    <li ui-sref-active="active"><a href="#/"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
+    <li class="treeview active">
+      <a href ui-sref="task">
+        <i class="glyphicon glyphicon-th-list"></i>
+        <span translate="global.menu.entities.main">Entities</span>
+        <i class="fa fa-angle-left pull-right"></i>
+      </a>
+      <ul class="treeview-menu menu-open">
+        <li ui-sref-active="active" ><a ui-sref="report"><span class="fa fa-pie-chart"></span>
+        &#xA0;<span translate="global.menu.entities.report">Report</span></a></li>
+        <li ui-sref-active="active" ><a ui-sref="db"><span class="fa fa-database"></span>
+        &#xA0;<span translate="global.menu.entities.db">Db</span></a></li>
+        <!-- jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here -->
+      </ul>
+    </li>
+    <li class="treeview active">
+      <a href ui-sref="settings">
+        <i class="glyphicon glyphicon-user"></i>
+        <span translate="global.menu.account.main">Account</span>
+        <i class="fa fa-angle-left pull-right"></i>
+      </a>
+      <ul class="treeview-menu menu-open" has-any-authority="ROLE_ADMIN,ROLE_USER">
+        <li ui-sref-active="active"><a ui-sref="settings"><span class="glyphicon glyphicon-wrench"></span>
+            &#xA0;<span translate="global.menu.account.settings">Settings</span></a></li>
+        <li ui-sref-active="active"><a ui-sref="password"><span class="glyphicon glyphicon-lock"></span>
+            &#xA0;<span translate="global.menu.account.password">Password</span></a></li>
+        <li ui-sref-active="active"><a ui-sref="sessions"><span class="glyphicon glyphicon-cloud"></span>
+            &#xA0;<span translate="global.menu.account.sessions">Sessions</span></a></li>
+        <li ui-sref-active="active"><a href="" ng-click="logout()"><span class="glyphicon glyphicon-log-out"></span>
+            &#xA0;<span translate="global.menu.account.logout">Log out</span></a></li>
+        <li ui-sref-active="active"><a ui-sref="login"><span class="glyphicon glyphicon-log-in"></span>
+            &#xA0;<span translate="global.menu.account.login">Authenticate</span></a></li>
+        <li ui-sref-active="active"><a ui-sref="register"><span class="glyphicon glyphicon-plus-sign"></span>
+            &#xA0;<span translate="global.menu.account.register">Register</span></a></li>
+      </ul>
+    </li>
+    <li class="treeview active" has-authority="ROLE_ADMIN">
+      <a href ui-sref="tracker">
+        <i class="glyphicon glyphicon-tower"></i> <span translate="global.menu.admin.main">Admin</span>
+        <i class="fa fa-angle-left pull-right"></i>
+      </a>
+      <ul class="treeview-menu menu-open">
+        <li ui-sref-active="active"><a ui-sref="user-management"><span class="glyphicon glyphicon-user"></span>
+            &#xA0;<span translate="global.menu.admin.user-management">user-management</span></a></li>
+        <li ui-sref-active="active"><a ui-sref="tracker"><span class="glyphicon glyphicon-eye-open"></span>
+            &#xA0;<span translate="global.menu.admin.tracker">User tracking</span></a></li>
+        <li ui-sref-active="active"><a ui-sref="metrics"><span class="glyphicon glyphicon-dashboard"></span>
+            &#xA0;<span translate="global.menu.admin.metrics">Metrics</span></a></li>
+        <li ui-sref-active="active"><a ui-sref="health"><span class="glyphicon glyphicon-heart"></span>
+            &#xA0;<span translate="global.menu.admin.health">Health</span></a></li>
+        <li ui-sref-active="active"><a ui-sref="configuration"><span class="glyphicon glyphicon-list-alt"></span>
+            &#xA0;<span translate="global.menu.admin.configuration">Configuration</span></a></li>
+        <li ui-sref-active="active"><a ui-sref="audits"><span class="glyphicon glyphicon-bell"></span>
+            &#xA0;<span translate="global.menu.admin.audits">Audits</span></a></li>
+        <li ui-sref-active="active"><a ui-sref="logs"><span class="glyphicon glyphicon-tasks"></span>
+            &#xA0;<span translate="global.menu.admin.logs">Logs</span></a></li>
+        <li ui-sref-active="active"><a ui-sref="docs"><span class="glyphicon glyphicon-book"></span>
+            &#xA0;<span translate="global.menu.admin.apidocs">API Docs</span></a></li>
+        <li ui-sref-active="active" ><a ui-sref="entityAudit"><span class="glyphicon glyphicon-list-alt"></span>
+            &#xA0;<span translate="global.menu.admin.entityAudit">Entity audit</span></a></li>
+        <li ng-show="{{ENV === 'dev'}}"><a href='/h2-console' target="_tab"><span class="glyphicon glyphicon-hdd"></span>
+            &#xA0;<span translate="global.menu.admin.database">Database</span></a></li>
+      </ul>
+    </li>
+  </ul>
+</section>

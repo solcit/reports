@@ -1,0 +1,29 @@
+{
+    "reportsApp": {
+        "db" : {
+            "home": {
+                "title": "Dbs",
+                "createLabel": "Créer un nouveau Db",
+                "createOrEditLabel": "Créer ou éditer un Db",
+                "search": "Search for Db"
+            },
+            "created": "Un nouveau Db a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Db avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Db avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Db {{ id }} ?"
+            },
+            "detail": {
+                "title": "Db"
+            },
+            "name": "Name",
+            "userName": "UserName",
+            "password": "Password",
+            "server": "Server",
+            "port": "Port",
+            "enabled": "Enabled",
+            "report": "Report"
+        }
+    }
+}
+

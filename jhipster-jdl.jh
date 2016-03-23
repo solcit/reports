@@ -1,0 +1,72 @@
+/**
+ * Fuente de datos disponibles para la consulta
+ * de información de los reportes
+ */
+entity Db {
+  /**
+   * Nombre de la Base de datos
+   */
+  name String required,
+  /**
+   * Nombre del usuario de la base de datos
+   */
+  userName String required,
+  /**
+   * Contraseña del usuario de la base de datos,
+   * tener cuidado con estos datos ya que las contraseñas
+   * se almacenan en claro en base de datos,
+   * como buena practica se aconseja asegurarse
+   * que el usuario es de solo lectura */
+  password String required,
+  /**
+   * IP o nombre de dominio del servidor
+   * donde se encuentra la base de datos
+   */
+  server String required,
+  /**
+   * Puerto de la base de datos
+   */
+  port String,
+  /** 
+   * Bandera que indica si la base de datos esta
+   * activa o inactiva para ser usada en los reportes
+   */
+  enabled Boolean required
+}
+
+/**
+ * Definición y configuración de los reportes
+ */
+entity Report {
+  /**
+   * Nombre del Reporte
+   */
+  name String required,
+  /**
+   * Descripción del contenido del reporte
+   */
+  description String required maxlength(2000),
+  /**
+   * Icono que mostrara en el front el reporte
+   * basado en awesome icons y/o ionic icons
+   */
+  icon String,
+  /**
+   * Color del panel basado en bootstrap colors
+   */
+  color String,
+  /**
+   * Bandera que indica si se encuentra
+   * activo o inactivo el reporte,
+   * esto incide en el despliegue del reporte
+   */
+  enabled Boolean required
+}
+
+relationship OneToMany {
+  Db{report(name)} to Report{db(name)}
+}
+
+dto all with mapstruct
+service all with serviceClass
+paginate all with pagination

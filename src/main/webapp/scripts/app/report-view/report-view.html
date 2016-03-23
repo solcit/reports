@@ -1,0 +1,31 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+    {{'global.title' | translate}}
+    <small translate="global.description"></small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><i class="fa fa-dashboard"></i> {{'global.title' | translate}}</li>
+    </ol>
+</section>
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-lg-3 col-xs-6" ng-repeat="report in reports">
+            <!-- small box -->
+            <div class="small-box" ng-class="report.color">
+                <div class="inner" style="height: 200px; overflow: hidden;">
+                    <h4>{{report.name}}</h4>
+                    <p><small>{{report.description}}</small></p>
+                </div>
+                <div class="icon">
+                    <i ng-class="report.icon"></i>
+                </div>
+                <a href class="small-box-footer" ui-sref="report-view({id: report.id})">
+                    Más información <i class="fa fa-arrow-circle-right"></i>
+                </a>
+            </div>
+        </div>
+        <!-- ./col -->
+    </div>
+</section>

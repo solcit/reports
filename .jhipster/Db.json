@@ -1,0 +1,69 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "report",
+      "otherEntityName": "report",
+      "relationshipType": "one-to-many",
+      "otherEntityRelationshipName": "db"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "name",
+      "javadoc": "Nombre de la Base de datos",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "userName",
+      "javadoc": "Nombre del usuario de la base de datos",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "password",
+      "javadoc": "Contraseña del usuario de la base de datos,tener cuidado con estos datos ya que las contraseñasse almacenan en claro en base de datos,como buena practica se aconseja asegurarseque el usuario es de solo lectura",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "server",
+      "javadoc": "IP o nombre de dominio del servidordonde se encuentra la base de datos",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldId": 5,
+      "fieldName": "port",
+      "javadoc": "Puerto de la base de datos",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 6,
+      "fieldName": "enabled",
+      "javadoc": "Bandera que indica si la base de datos estaactiva o inactiva para ser usada en los reportes",
+      "fieldType": "Boolean",
+      "fieldValidateRules": [
+        "required"
+      ]
+    }
+  ],
+  "changelogDate": "20160315043421",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass",
+  "javadoc": "Fuente de datos disponibles para la consultade información de los reportes"
+}

@@ -1,0 +1,2 @@
+id;name;user_name;password;server;port;enabled;created_by
+1;apertur2_sistema;root;catrina;192.168.99.100;3306;true;system

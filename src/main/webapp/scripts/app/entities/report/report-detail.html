@@ -1,0 +1,70 @@
+
+<div>
+    <h2><span translate="reportsApp.report.detail.title">Report</span> {{report.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="reportsApp.report.name">Name</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{report.name}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="reportsApp.report.description">Description</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{report.description}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="reportsApp.report.icon">Icon</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{report.icon}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="reportsApp.report.color">Color</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{report.color}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="reportsApp.report.enabled">Enabled</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{report.enabled}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="reportsApp.report.db">db</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="db.detail({id:report.dbId})">{{report.dbName}}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

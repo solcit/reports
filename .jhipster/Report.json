@@ -1,0 +1,60 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "db",
+            "otherEntityName": "db",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "name"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "name",
+            "javadoc": "Nombre del Reporte",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "description",
+            "javadoc": "Descripción del contenido del reporte",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 2000
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "icon",
+            "javadoc": "Icono que mostrara en el front el reportebasado en awesome icons y/o ionic icons",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "color",
+            "javadoc": "Color del panel basado en bootstrap colors",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "enabled",
+            "javadoc": "Bandera que indica si se encuentraactivo o inactivo el reporte,esto incide en el despliegue del reporte",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20160225022814",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "javadoc": "Definición y configuración de los reportes",
+    "enableEntityAudit": true
+}
